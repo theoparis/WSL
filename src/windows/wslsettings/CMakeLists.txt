@@ -33,7 +33,7 @@ file(GLOB STRINGS ${CMAKE_SOURCE_DIR}/localization/strings/**/*.resw)
 
 add_executable(
   ${TargetApp} WIN32
-  app.manifest
+  ${CMAKE_CURRENT_SOURCE_DIR}/app.manifest
   App.xaml
   App.xaml.cs
   Constants.cs
@@ -239,7 +239,7 @@ set_target_properties(
   VS_GLOBAL_SelfContained true
   VS_GLOBAL_WindowsAppSDKSelfContained true
   VS_GLOBAL_ApplicationIcon "${CMAKE_SOURCE_DIR}/images/wsl.ico"
-  VS_GLOBAL_ApplicationManifest "app.manifest"
+  VS_GLOBAL_ApplicationManifest "${CMAKE_CURRENT_SOURCE_DIR}/app.manifest"
   VS_GLOBAL_RuntimeIdentifier "win-${TARGET_PLATFORM}"
   VS_GLOBAL_RuntimeIdentifiers "win-${TARGET_PLATFORM}"
   VS_GLOBAL_Platform "${TARGET_PLATFORM}"
